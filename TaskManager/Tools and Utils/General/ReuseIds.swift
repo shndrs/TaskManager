@@ -13,4 +13,8 @@ struct ReuseIds {
         LanguageSelectionTVC.reuseIdentifier
     ]
     
+    static let taskBoard = [
+        TaskBoardTVC.reuseIdentifier
+    ]
+    
 }

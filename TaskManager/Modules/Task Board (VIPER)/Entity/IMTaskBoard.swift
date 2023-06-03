@@ -27,9 +27,9 @@ enum TaskStatus: UInt8 { /// - Note: I choose UInt8 because of sufficient memory
     func getIcon() -> UIImage {
         switch self {
         case .completed:
-            return Images.placeholder
+            return Images.success
         case .inProgress:
-            return Images.placeholder
+            return Images.inProgress
         }
     }
     
@@ -39,6 +39,15 @@ enum TaskStatus: UInt8 { /// - Note: I choose UInt8 because of sufficient memory
             return Strings.completed.value()
         case .inProgress:
             return Strings.inProgress.value()
+        }
+    }
+    
+    func getColor() -> UIColor {
+        switch self {
+        case .completed:
+            return Colors.grassGreen
+        case .inProgress:
+            return Colors.yellow
         }
     }
     

@@ -17,4 +17,9 @@ struct Images {
     public static let england = UIImage(named: "england")!
     public static let italy = UIImage(named: "italy")!
     
+    // MARK: - Task Board
+    
+    public static let success = UIImage(named: "success-task")!
+    public static let inProgress = UIImage(named: "work-in-progress-task")!
+    
 }

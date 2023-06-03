@@ -30,6 +30,8 @@ extension Strings {
             return "Completato"
         case .inProgress:
             return "In corso"
+        case .myTasks:
+            return "I miei Compiti"
         }
     }
     
@@ -54,6 +56,8 @@ extension Strings {
             return "Completed"
         case .inProgress:
             return "In Progress"
+        case .myTasks:
+            return "My Tasks"
         }
     }
     

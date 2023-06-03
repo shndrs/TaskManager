@@ -38,7 +38,14 @@ final class LanguageSelectionVC: TableBaseViewController {
 fileprivate extension LanguageSelectionVC {
     
     @IBAction func selectPressed(_ sender: UIButton) {
-        
+        let view = TaskBoardRouter.createModule()
+        let navigation = BaseNavigationController(rootViewController: view)
+        self.view.window?.switchRootViewController(navigation,
+                                                   options: .transitionFlipFromBottom) {
+            self.navigationController?.viewControllers = [
+                self.navigationController?.viewControllers.last ?? view
+            ]
+        }
     }
     
 }
