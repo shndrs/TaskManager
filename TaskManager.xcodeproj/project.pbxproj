@@ -50,6 +50,7 @@
 		182E78B32A2B171A002A4C12 /* StoryboardIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78B22A2B171A002A4C12 /* StoryboardIds.swift */; };
 		182E78B52A2B173D002A4C12 /* LanguageSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182E78B42A2B173D002A4C12 /* LanguageSelection.storyboard */; };
 		182E78B72A2B1E70002A4C12 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78B62A2B1E70002A4C12 /* UIViewController.swift */; };
+		182E78BB2A2B250E002A4C12 /* IMTaskBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78BA2A2B250E002A4C12 /* IMTaskBoard.swift */; };
 		93FEFF1463B0883C4F9B5D93 /* Pods_TaskManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC02E1A7FFF175C8BE303BC6 /* Pods_TaskManager.framework */; };
 		F44D70A42A2AE6E200B7D3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D70A32A2AE6E200B7D3B3 /* AppDelegate.swift */; };
 		F44D70A62A2AE6E200B7D3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D70A52A2AE6E200B7D3B3 /* SceneDelegate.swift */; };
@@ -103,6 +104,7 @@
 		182E78B22A2B171A002A4C12 /* StoryboardIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIds.swift; sourceTree = "<group>"; };
 		182E78B42A2B173D002A4C12 /* LanguageSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LanguageSelection.storyboard; sourceTree = "<group>"; };
 		182E78B62A2B1E70002A4C12 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		182E78BA2A2B250E002A4C12 /* IMTaskBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMTaskBoard.swift; sourceTree = "<group>"; };
 		964C59A790365A07D3E922E7 /* Pods-TaskManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManager.debug.xcconfig"; path = "Target Support Files/Pods-TaskManager/Pods-TaskManager.debug.xcconfig"; sourceTree = "<group>"; };
 		DC02E1A7FFF175C8BE303BC6 /* Pods_TaskManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44D70A02A2AE6E200B7D3B3 /* TaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -281,6 +283,7 @@
 		182E788A2A2AF5C2002A4C12 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				182E78B82A2B24CF002A4C12 /* Task Board (VIPER) */,
 				182E789D2A2B0167002A4C12 /* Language Selection (MVP) */,
 				182E788B2A2AF5CB002A4C12 /* Entry and Splash */,
 				182E788C2A2AF654002A4C12 /* Base */,
@@ -369,6 +372,22 @@
 				182E78AD2A2B127E002A4C12 /* LanguageSelectionTVC.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		182E78B82A2B24CF002A4C12 /* Task Board (VIPER) */ = {
+			isa = PBXGroup;
+			children = (
+				182E78B92A2B24FC002A4C12 /* Entity */,
+			);
+			path = "Task Board (VIPER)";
+			sourceTree = "<group>";
+		};
+		182E78B92A2B24FC002A4C12 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				182E78BA2A2B250E002A4C12 /* IMTaskBoard.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		CAA679823BE59C82FA1997B4 /* Pods */ = {
@@ -571,6 +590,7 @@
 				182E78A82A2B10CB002A4C12 /* LanguageSelectionVC.swift in Sources */,
 				182E78732A2AF318002A4C12 /* TintButton.swift in Sources */,
 				182E786A2A2AEFEA002A4C12 /* Strings.swift in Sources */,
+				182E78BB2A2B250E002A4C12 /* IMTaskBoard.swift in Sources */,
 				182E78752A2AF32A002A4C12 /* RoundedButton.swift in Sources */,
 				F44D70A42A2AE6E200B7D3B3 /* AppDelegate.swift in Sources */,
 				182E78892A2AF591002A4C12 /* LogManager.swift in Sources */,

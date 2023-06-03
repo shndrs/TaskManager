@@ -27,6 +27,11 @@ enum Strings: String {
     // MARK: - Language Selection
     
     case selectLanguage
+    
+    // MARK: - Task Board
+    
+    case completed
+    case inProgress
         
 }
 

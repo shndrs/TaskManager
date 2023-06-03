@@ -26,6 +26,10 @@ extension Strings {
             return "Seleziona la lingua"
         case .select:
             return "Selezionare"
+        case .completed:
+            return "Completato"
+        case .inProgress:
+            return "In corso"
         }
     }
     
@@ -46,6 +50,10 @@ extension Strings {
             return "Select Language"
         case .select:
             return "Select"
+        case .completed:
+            return "Completed"
+        case .inProgress:
+            return "In Progress"
         }
     }
     
