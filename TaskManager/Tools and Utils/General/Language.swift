@@ -10,8 +10,8 @@ import UIKit
 
 enum Language: String {
     
-    case italian = "it"
-    case english = "en"
+    case italian = "ITALY"
+    case english = "ENGLISH"
     
 }
 

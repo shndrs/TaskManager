@@ -30,7 +30,16 @@ fileprivate extension SplashVC {
     }
     
     func startRouting() {
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
+            let view = LanguageSelectionVC.instantiate(storyboard: .languageSelection)
+            let navigation = BaseNavigationController(rootViewController: view)
+            self.view.window?.switchRootViewController(navigation,
+                                                       options: .transitionCrossDissolve) {
+                self.navigationController?.viewControllers = [
+                    self.navigationController?.viewControllers.last ?? view
+                ]
+            }
+        }
     }
     
 }
@@ -42,6 +51,7 @@ extension SplashVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         animationToggle()
+        startRouting()
     }
     
 }

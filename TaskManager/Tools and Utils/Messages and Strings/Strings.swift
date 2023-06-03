@@ -22,6 +22,11 @@ enum Strings: String {
     case error
     case italian
     case english
+    case select
+    
+    // MARK: - Language Selection
+    
+    case selectLanguage
         
 }
 

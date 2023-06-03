@@ -15,11 +15,19 @@ final class LanguageSelectionVC: TableBaseViewController {
         return LanguageSelectionPresenter(view: self)
     }()
     
+    @IBOutlet private weak var btnSelect: RoundedButton! {
+        didSet {
+            btnSelect.setTitle(Strings.select.value(),
+                               for: .normal)
+        }
+    }
+    
     override func tableSetup() {
         super.tableSetup()
+        tableView.separatorStyle = .singleLine
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.cleanFooterView()
+        tableView.rowHeight = 90
         register(reuseIds: ReuseIds.languageSelection)
     }
     
@@ -41,6 +49,8 @@ extension LanguageSelectionVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = Strings.selectLanguage.value()
+        largeTitle = true
         presenter.fetchLanguages()
     }
     
@@ -77,6 +87,15 @@ extension LanguageSelectionVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.set(language: languages?[indexPath.row].id)
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.accessoryType = .checkmark
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.accessoryType = .none
+        }
     }
     
 }

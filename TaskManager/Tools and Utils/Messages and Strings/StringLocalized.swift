@@ -22,6 +22,10 @@ extension Strings {
             return "Italiano"
         case .english:
             return "Inglese"
+        case .selectLanguage:
+            return "Seleziona la lingua"
+        case .select:
+            return "Selezionare"
         }
     }
     
@@ -38,6 +42,10 @@ extension Strings {
             return "Italian"
         case .english:
             return "English"
+        case .selectLanguage:
+            return "Select Language"
+        case .select:
+            return "Select"
         }
     }
     

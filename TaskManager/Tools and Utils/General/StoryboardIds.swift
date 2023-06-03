@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum StoryboardIds: String {
+enum StoryboardId: String {
     
     case languageSelection = "LanguageSelection"
     

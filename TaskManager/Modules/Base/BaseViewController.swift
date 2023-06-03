@@ -40,6 +40,7 @@ class BaseViewController: UIViewController {
                                                            style: .plain,
                                                            target: nil,
                                                            action: nil)
+        view.backgroundColor = Colors.secondaryBack
     }
     
     override func viewWillAppear(_ animated: Bool) {

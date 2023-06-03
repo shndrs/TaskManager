@@ -9,8 +9,12 @@ import UIKit
 
 final class LanguageSelectionTVC: BaseTableViewCell, ReusableView {
 
-    @IBOutlet private weak var lblId: LabelLight!
     @IBOutlet private weak var lblTitle: LabelBold!
+    @IBOutlet private weak var lblId: LabelLight! {
+        didSet {
+            lblId.textColor = Colors.secondaryLabel
+        }
+    }
     @IBOutlet private weak var imgFlag: UIImageView!
     
 }
@@ -38,7 +42,6 @@ extension LanguageSelectionTVC {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        selectionStyle = .gray
     }
     
 }

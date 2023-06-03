@@ -49,6 +49,7 @@
 		182E78B12A2B159A002A4C12 /* ReuseIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78B02A2B159A002A4C12 /* ReuseIds.swift */; };
 		182E78B32A2B171A002A4C12 /* StoryboardIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78B22A2B171A002A4C12 /* StoryboardIds.swift */; };
 		182E78B52A2B173D002A4C12 /* LanguageSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182E78B42A2B173D002A4C12 /* LanguageSelection.storyboard */; };
+		182E78B72A2B1E70002A4C12 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78B62A2B1E70002A4C12 /* UIViewController.swift */; };
 		93FEFF1463B0883C4F9B5D93 /* Pods_TaskManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC02E1A7FFF175C8BE303BC6 /* Pods_TaskManager.framework */; };
 		F44D70A42A2AE6E200B7D3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D70A32A2AE6E200B7D3B3 /* AppDelegate.swift */; };
 		F44D70A62A2AE6E200B7D3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D70A52A2AE6E200B7D3B3 /* SceneDelegate.swift */; };
@@ -101,6 +102,7 @@
 		182E78B02A2B159A002A4C12 /* ReuseIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIds.swift; sourceTree = "<group>"; };
 		182E78B22A2B171A002A4C12 /* StoryboardIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIds.swift; sourceTree = "<group>"; };
 		182E78B42A2B173D002A4C12 /* LanguageSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LanguageSelection.storyboard; sourceTree = "<group>"; };
+		182E78B62A2B1E70002A4C12 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		964C59A790365A07D3E922E7 /* Pods-TaskManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManager.debug.xcconfig"; path = "Target Support Files/Pods-TaskManager/Pods-TaskManager.debug.xcconfig"; sourceTree = "<group>"; };
 		DC02E1A7FFF175C8BE303BC6 /* Pods_TaskManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44D70A02A2AE6E200B7D3B3 /* TaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +240,7 @@
 				182E787F2A2AF400002A4C12 /* UINavigationController.swift */,
 				182E78982A2AFC88002A4C12 /* UIWindow.swift */,
 				182E78A92A2B11B8002A4C12 /* UITableView.swift */,
+				182E78B62A2B1E70002A4C12 /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				182E78632A2AEF12002A4C12 /* Language.swift in Sources */,
 				182E785E2A2AEEAC002A4C12 /* LabelBold.swift in Sources */,
 				182E784D2A2AED48002A4C12 /* KeyboardManager.swift in Sources */,
+				182E78B72A2B1E70002A4C12 /* UIViewController.swift in Sources */,
 				182E78AA2A2B11B8002A4C12 /* UITableView.swift in Sources */,
 				182E78902A2AF686002A4C12 /* Typealias.swift in Sources */,
 				182E785A2A2AEE90002A4C12 /* LabelMedium.swift in Sources */,
