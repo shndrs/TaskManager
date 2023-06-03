@@ -55,13 +55,3 @@ extension Language {
     }
     
 }
-
-// MARK: - Language Model
-
-struct IMLanguage {
-    
-    var id: String!
-    var title: String!
-    var flag: UIImage?
-    
-}

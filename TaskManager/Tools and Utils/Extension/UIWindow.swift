@@ -8,6 +8,8 @@
 import UIKit
 
 extension UIWindow {
+    
+    /// - Note: Empty UIViewControllers stack and start with new one (UIViewController based object such as Navigation, TableView and etc...)
 
     func switchRootViewController(_ viewController: UIViewController,
                                   animated: Bool = true,
