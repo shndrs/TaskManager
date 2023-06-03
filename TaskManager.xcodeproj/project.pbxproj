@@ -27,6 +27,10 @@
 		182E78732A2AF318002A4C12 /* TintButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78722A2AF318002A4C12 /* TintButton.swift */; };
 		182E78752A2AF32A002A4C12 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78742A2AF32A002A4C12 /* RoundedButton.swift */; };
 		182E787A2A2AF368002A4C12 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78792A2AF368002A4C12 /* UIView.swift */; };
+		182E787E2A2AF3E3002A4C12 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E787D2A2AF3E3002A4C12 /* BaseNavigationController.swift */; };
+		182E78802A2AF400002A4C12 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E787F2A2AF400002A4C12 /* UINavigationController.swift */; };
+		182E78832A2AF48F002A4C12 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78822A2AF48F002A4C12 /* BaseTextField.swift */; };
+		182E78862A2AF4EE002A4C12 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78852A2AF4EE002A4C12 /* ReusableView.swift */; };
 		93FEFF1463B0883C4F9B5D93 /* Pods_TaskManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC02E1A7FFF175C8BE303BC6 /* Pods_TaskManager.framework */; };
 		F44D70A42A2AE6E200B7D3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D70A32A2AE6E200B7D3B3 /* AppDelegate.swift */; };
 		F44D70A62A2AE6E200B7D3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D70A52A2AE6E200B7D3B3 /* SceneDelegate.swift */; };
@@ -58,6 +62,10 @@
 		182E78722A2AF318002A4C12 /* TintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintButton.swift; sourceTree = "<group>"; };
 		182E78742A2AF32A002A4C12 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		182E78792A2AF368002A4C12 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		182E787D2A2AF3E3002A4C12 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		182E787F2A2AF400002A4C12 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		182E78822A2AF48F002A4C12 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		182E78852A2AF4EE002A4C12 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		964C59A790365A07D3E922E7 /* Pods-TaskManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManager.debug.xcconfig"; path = "Target Support Files/Pods-TaskManager/Pods-TaskManager.debug.xcconfig"; sourceTree = "<group>"; };
 		DC02E1A7FFF175C8BE303BC6 /* Pods_TaskManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44D70A02A2AE6E200B7D3B3 /* TaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +101,7 @@
 		182E78462A2AECC7002A4C12 /* Tools and Utils */ = {
 			isa = PBXGroup;
 			children = (
+				182E78842A2AF4E2002A4C12 /* Protocol */,
 				182E78762A2AF343002A4C12 /* Extension */,
 				182E78672A2AEFD6002A4C12 /* Messages and Strings */,
 				182E78642A2AEF37002A4C12 /* Storage */,
@@ -118,6 +127,8 @@
 		182E784E2A2AEDE7002A4C12 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				182E78812A2AF480002A4C12 /* TextField */,
+				182E787C2A2AF3D1002A4C12 /* Navigation */,
 				182E786F2A2AF2FC002A4C12 /* Button */,
 				182E78542A2AEE6D002A4C12 /* Label */,
 				182E784F2A2AEDED002A4C12 /* TableView */,
@@ -185,8 +196,33 @@
 			isa = PBXGroup;
 			children = (
 				182E78792A2AF368002A4C12 /* UIView.swift */,
+				182E787F2A2AF400002A4C12 /* UINavigationController.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		182E787C2A2AF3D1002A4C12 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				182E787D2A2AF3E3002A4C12 /* BaseNavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		182E78812A2AF480002A4C12 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				182E78822A2AF48F002A4C12 /* BaseTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		182E78842A2AF4E2002A4C12 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				182E78852A2AF4EE002A4C12 /* ReusableView.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		CAA679823BE59C82FA1997B4 /* Pods */ = {
@@ -354,14 +390,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182E78862A2AF4EE002A4C12 /* ReusableView.swift in Sources */,
 				F44D70A82A2AE6E200B7D3B3 /* ViewController.swift in Sources */,
+				182E78802A2AF400002A4C12 /* UINavigationController.swift in Sources */,
 				182E78562A2AEE78002A4C12 /* BaseLabel.swift in Sources */,
 				182E78612A2AEEE2002A4C12 /* Font.swift in Sources */,
+				182E78832A2AF48F002A4C12 /* BaseTextField.swift in Sources */,
 				182E78532A2AEE39002A4C12 /* ClearCell.swift in Sources */,
 				182E78582A2AEE84002A4C12 /* LabelLight.swift in Sources */,
 				182E78492A2AECF4002A4C12 /* Colors.swift in Sources */,
 				182E78712A2AF305002A4C12 /* BaseButton.swift in Sources */,
 				182E787A2A2AF368002A4C12 /* UIView.swift in Sources */,
+				182E787E2A2AF3E3002A4C12 /* BaseNavigationController.swift in Sources */,
 				182E78632A2AEF12002A4C12 /* Language.swift in Sources */,
 				182E785E2A2AEEAC002A4C12 /* LabelBold.swift in Sources */,
 				182E784D2A2AED48002A4C12 /* KeyboardManager.swift in Sources */,

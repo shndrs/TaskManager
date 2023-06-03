@@ -196,17 +196,6 @@ extension UIView {
         }
     }
     
-    func dropShadow(scale: Bool = true) {
-        layer.masksToBounds = false
-        layer.shadowColor = Colors.label.cgColor
-        layer.shadowOpacity = 0.5
-        layer.shadowOffset = CGSize(width: 1, height: 1)
-        layer.shadowRadius = 3
-        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
-        layer.shouldRasterize = true
-        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
-    }
-    
     func shake(ratio: CGFloat? = 10) {
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.1
@@ -220,25 +209,7 @@ extension UIView {
 //        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
     }
     
-    func rotate() {
-        let rotation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-        rotation.duration = 0.3
-        rotation.autoreverses = true
-        rotation.fromValue = (-Double.pi / 9)
-        rotation.toValue = (Double.pi / 9)
-        rotation.repeatCount = Float.infinity
-        self.layer.add(rotation, forKey: "rotationAnimation")
-    }
-    
-    func rotateY() {
-        let rotation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.y")
-        rotation.duration = 0.9
-        rotation.autoreverses = true
-        rotation.fromValue = (-Double.pi / 5)
-        rotation.toValue = (Double.pi / 5)
-        rotation.repeatCount = Float.infinity
-        self.layer.add(rotation, forKey: "rotationAnimation")
-    }
+
     
     func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners,
@@ -249,4 +220,3 @@ extension UIView {
     }
 
 }
-
