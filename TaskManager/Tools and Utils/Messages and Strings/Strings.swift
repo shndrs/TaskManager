@@ -33,6 +33,8 @@ enum Strings: String {
     case completed
     case inProgress
     case myTasks
+    case noTaskHere
+    case addSomeTasks
         
 }
 

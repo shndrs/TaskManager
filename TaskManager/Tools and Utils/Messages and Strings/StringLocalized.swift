@@ -32,6 +32,10 @@ extension Strings {
             return "In corso"
         case .myTasks:
             return "I miei Compiti"
+        case .noTaskHere:
+            return "Non c'è compito qui"
+        case .addSomeTasks:
+            return "Vai ad aggiungerne un po'"
         }
     }
     
@@ -58,6 +62,10 @@ extension Strings {
             return "In Progress"
         case .myTasks:
             return "My Tasks"
+        case .noTaskHere:
+            return "There's no task here"
+        case .addSomeTasks:
+            return "Go add some"
         }
     }
     

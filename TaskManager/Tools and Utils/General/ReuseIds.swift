@@ -14,7 +14,8 @@ struct ReuseIds {
     ]
     
     static let taskBoard = [
-        TaskBoardTVC.reuseIdentifier
+        TaskBoardTVC.reuseIdentifier,
+        NoTaskCell.reuseIdentifier
     ]
     
 }

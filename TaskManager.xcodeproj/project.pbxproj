@@ -60,6 +60,9 @@
 		182E78CF2A2B40E9002A4C12 /* TaskBoardTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182E78CD2A2B40E9002A4C12 /* TaskBoardTVC.xib */; };
 		182E78D12A2B4117002A4C12 /* RoundedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78D02A2B4117002A4C12 /* RoundedTableViewCell.swift */; };
 		182E78D32A2B45E7002A4C12 /* TaskBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182E78D22A2B45E7002A4C12 /* TaskBoard.storyboard */; };
+		182E78D62A2B46FA002A4C12 /* NoTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78D42A2B46FA002A4C12 /* NoTaskCell.swift */; };
+		182E78D72A2B46FA002A4C12 /* NoTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182E78D52A2B46FA002A4C12 /* NoTaskCell.xib */; };
+		182E78D92A2B4BB6002A4C12 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78D82A2B4BB6002A4C12 /* ImageButton.swift */; };
 		93FEFF1463B0883C4F9B5D93 /* Pods_TaskManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC02E1A7FFF175C8BE303BC6 /* Pods_TaskManager.framework */; };
 		F44D70A42A2AE6E200B7D3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D70A32A2AE6E200B7D3B3 /* AppDelegate.swift */; };
 		F44D70A62A2AE6E200B7D3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D70A52A2AE6E200B7D3B3 /* SceneDelegate.swift */; };
@@ -123,6 +126,9 @@
 		182E78CD2A2B40E9002A4C12 /* TaskBoardTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskBoardTVC.xib; sourceTree = "<group>"; };
 		182E78D02A2B4117002A4C12 /* RoundedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTableViewCell.swift; sourceTree = "<group>"; };
 		182E78D22A2B45E7002A4C12 /* TaskBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskBoard.storyboard; sourceTree = "<group>"; };
+		182E78D42A2B46FA002A4C12 /* NoTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTaskCell.swift; sourceTree = "<group>"; };
+		182E78D52A2B46FA002A4C12 /* NoTaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoTaskCell.xib; sourceTree = "<group>"; };
+		182E78D82A2B4BB6002A4C12 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
 		964C59A790365A07D3E922E7 /* Pods-TaskManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManager.debug.xcconfig"; path = "Target Support Files/Pods-TaskManager/Pods-TaskManager.debug.xcconfig"; sourceTree = "<group>"; };
 		DC02E1A7FFF175C8BE303BC6 /* Pods_TaskManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44D70A02A2AE6E200B7D3B3 /* TaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +256,7 @@
 				182E78702A2AF304002A4C12 /* BaseButton.swift */,
 				182E78722A2AF318002A4C12 /* TintButton.swift */,
 				182E78742A2AF32A002A4C12 /* RoundedButton.swift */,
+				182E78D82A2B4BB6002A4C12 /* ImageButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -437,6 +444,8 @@
 			children = (
 				182E78CC2A2B40E9002A4C12 /* TaskBoardTVC.swift */,
 				182E78CD2A2B40E9002A4C12 /* TaskBoardTVC.xib */,
+				182E78D42A2B46FA002A4C12 /* NoTaskCell.swift */,
+				182E78D52A2B46FA002A4C12 /* NoTaskCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -578,6 +587,7 @@
 				182E78CF2A2B40E9002A4C12 /* TaskBoardTVC.xib in Resources */,
 				F44D70AD2A2AE6E400B7D3B3 /* Assets.xcassets in Resources */,
 				F44D70AB2A2AE6E200B7D3B3 /* Main.storyboard in Resources */,
+				182E78D72A2B46FA002A4C12 /* NoTaskCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +659,7 @@
 				182E787A2A2AF368002A4C12 /* UIView.swift in Sources */,
 				182E78A32A2B0F6A002A4C12 /* BaseView.swift in Sources */,
 				182E78972A2AFBFD002A4C12 /* SplashVC.swift in Sources */,
+				182E78D92A2B4BB6002A4C12 /* ImageButton.swift in Sources */,
 				182E787E2A2AF3E3002A4C12 /* BaseNavigationController.swift in Sources */,
 				182E78A52A2B0F92002A4C12 /* LanguageSelectionPresenter.swift in Sources */,
 				182E78992A2AFC88002A4C12 /* UIWindow.swift in Sources */,
@@ -681,6 +692,7 @@
 				182E78512A2AEE08002A4C12 /* BaseTableViewCell.swift in Sources */,
 				F44D70A62A2AE6E200B7D3B3 /* SceneDelegate.swift in Sources */,
 				182E784B2A2AED13002A4C12 /* Register.swift in Sources */,
+				182E78D62A2B46FA002A4C12 /* NoTaskCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
