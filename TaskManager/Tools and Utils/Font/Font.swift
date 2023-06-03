@@ -19,28 +19,28 @@ enum Font: String {
             case .bold:
                 switch Language.current() {
                 case .italian:
-                    return UIFont(name: "IRANSansMonoSpacedNum-Bold", size: size)!
+                    return UIFont(name: "AvenirNext-Bold", size: size)!
                 case .english:
                     return UIFont(name: "AvenirNext-Bold", size: size)!
                 }
             case .medium:
             switch Language.current() {
                 case .italian:
-                    return UIFont(name: "IRANSansMonoSpacedNum-Bold", size: size)!
+                    return UIFont(name: "AvenirNext-Medium", size: size)!
                 case .english:
                     return UIFont(name: "AvenirNext-Medium", size: size)!
             }
             case .regular:
             switch Language.current() {
                 case .italian:
-                    return UIFont(name: "IRANSansMonoSpacedNum", size: size)!
+                    return UIFont(name: "AvenirNext-Regular", size: size)!
                 case .english:
                     return UIFont(name: "AvenirNext-Regular", size: size)!
             }
             case .light:
             switch Language.current() {
                 case .italian:
-                return UIFont(name: "IRANSansMonoSpacedNum-Light", size: size)!
+                return UIFont(name: "AvenirNext-UltraLight", size: size)!
                 case .english:
                     return UIFont(name: "AvenirNext-UltraLight", size: size)!
             }
@@ -50,11 +50,13 @@ enum Font: String {
     static func bold(language: Language, size: CGFloat = 15) -> UIFont {
         switch language {
         case .italian:
-            return UIFont(name: "IRANSansMonoSpacedNum-Bold", size: size)!
+            return UIFont(name: "AvenirNext-Bold", size: size)!
         case .english:
             return UIFont(name: "AvenirNext-Bold", size: size)!
         }
     }
+    
+    // MARK: - Print Fonts and Families in Console
     
     static func printAllFonts() {
         for family in UIFont.familyNames {

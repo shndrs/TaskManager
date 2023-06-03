@@ -1,20 +1,24 @@
 PODS:
   - IQKeyboardManager (6.5.11)
+  - PureLayout (3.1.9)
   - SkyFloatingLabelTextField (4.0.0)
 
 DEPENDENCIES:
   - IQKeyboardManager
+  - PureLayout (~> 3.1.6)
   - SkyFloatingLabelTextField
 
 SPEC REPOS:
   trunk:
     - IQKeyboardManager
+    - PureLayout
     - SkyFloatingLabelTextField
 
 SPEC CHECKSUMS:
   IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
+  PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
   SkyFloatingLabelTextField: 79ddc40e4ad59707fedbb48d605417aee48bb78a
 
-PODFILE CHECKSUM: e42f440443f7ad8853e9c6e450e8b3e44d1e418c
+PODFILE CHECKSUM: 9c7f3ef16ad70e254769b59ec2e394d2e3f629d0
 
 COCOAPODS: 1.11.3
