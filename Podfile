@@ -2,9 +2,10 @@
 # platform :ios, '9.0'
 
 target 'TaskManager' do
-  # Comment the next line if you don't want to use dynamic frameworks
+  
   use_frameworks!
 
-  # Pods for TaskManager
+  pod 'IQKeyboardManager'
+  pod 'SkyFloatingLabelTextField'
 
 end
