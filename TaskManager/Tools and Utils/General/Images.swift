@@ -13,5 +13,6 @@ struct Images {
     
     public static let placeholder = UIImage(named: "placeholder")!
     public static let dismissModal = UIImage(systemName: "multiply.square")!
+    public static let sahand = UIImage(named: "sahand")!
     
 }

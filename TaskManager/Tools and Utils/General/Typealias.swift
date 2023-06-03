@@ -8,4 +8,4 @@
 import Foundation
 
 typealias Action = (() -> Void)
-typealias Actional = (() -> Void)?
+typealias Actional = Action?
