@@ -36,6 +36,16 @@ extension Strings {
             return "Non c'è compito qui"
         case .addSomeTasks:
             return "Vai ad aggiungerne un po'"
+        case .titleIsEmpty:
+            return "Il titolo è vuoto!"
+        case .descriptionIsEmpty:
+            return "La descrizione è vuota!"
+        case .success:
+            return "Successo"
+        case .add:
+            return "Aggiungere"
+        case .cancel:
+            return "Annulla"
         }
     }
     
@@ -66,6 +76,16 @@ extension Strings {
             return "There's no task here"
         case .addSomeTasks:
             return "Go add some"
+        case .titleIsEmpty:
+            return "Title is empty!"
+        case .descriptionIsEmpty:
+            return "Description is empty!"
+        case .success:
+            return "Success"
+        case .add:
+            return "Add"
+        case .cancel:
+            return "Cancel"
         }
     }
     

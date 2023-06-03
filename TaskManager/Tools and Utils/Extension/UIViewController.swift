@@ -30,3 +30,17 @@ extension UIViewController {
     }
     
 }
+
+// MARK: - Toast View
+
+extension UIViewController {
+    
+    func show(error message: String) {
+        Toast.shared.show(failure: message)
+    }
+    
+    func show(information message: String) {
+        Toast.shared.show(information: message)
+    }
+    
+}

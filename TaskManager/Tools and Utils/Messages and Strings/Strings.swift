@@ -23,6 +23,9 @@ enum Strings: String {
     case italian
     case english
     case select
+    case success
+    case add
+    case cancel
     
     // MARK: - Language Selection
     
@@ -35,6 +38,11 @@ enum Strings: String {
     case myTasks
     case noTaskHere
     case addSomeTasks
+    
+    // MARK: - Add Task
+    
+    case titleIsEmpty
+    case descriptionIsEmpty
         
 }
 

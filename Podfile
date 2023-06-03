@@ -8,5 +8,6 @@ target 'TaskManager' do
   pod 'IQKeyboardManager'
   pod 'SkyFloatingLabelTextField'
   pod 'PureLayout', '~> 3.1.6'
-
+  pod 'SPIndicator'
+  
 end

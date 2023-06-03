@@ -63,6 +63,13 @@
 		182E78D62A2B46FA002A4C12 /* NoTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78D42A2B46FA002A4C12 /* NoTaskCell.swift */; };
 		182E78D72A2B46FA002A4C12 /* NoTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182E78D52A2B46FA002A4C12 /* NoTaskCell.xib */; };
 		182E78D92A2B4BB6002A4C12 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78D82A2B4BB6002A4C12 /* ImageButton.swift */; };
+		182E78DD2A2B5AE1002A4C12 /* AddTaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78DC2A2B5AE1002A4C12 /* AddTaskPresenter.swift */; };
+		182E78E02A2B5AFF002A4C12 /* AddTaskValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78DF2A2B5AFF002A4C12 /* AddTaskValidator.swift */; };
+		182E78E32A2B5B58002A4C12 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78E22A2B5B58002A4C12 /* CustomError.swift */; };
+		182E78E52A2B5C57002A4C12 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78E42A2B5C57002A4C12 /* ErrorView.swift */; };
+		182E78E82A2B5CD7002A4C12 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78E72A2B5CD7002A4C12 /* Toast.swift */; };
+		182E78EA2A2B5DA4002A4C12 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78E92A2B5DA4002A4C12 /* ErrorViewController.swift */; };
+		182E78ED2A2B5F0E002A4C12 /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E78EC2A2B5F0E002A4C12 /* AddTaskVC.swift */; };
 		93FEFF1463B0883C4F9B5D93 /* Pods_TaskManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC02E1A7FFF175C8BE303BC6 /* Pods_TaskManager.framework */; };
 		F44D70A42A2AE6E200B7D3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D70A32A2AE6E200B7D3B3 /* AppDelegate.swift */; };
 		F44D70A62A2AE6E200B7D3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D70A52A2AE6E200B7D3B3 /* SceneDelegate.swift */; };
@@ -129,6 +136,13 @@
 		182E78D42A2B46FA002A4C12 /* NoTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTaskCell.swift; sourceTree = "<group>"; };
 		182E78D52A2B46FA002A4C12 /* NoTaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoTaskCell.xib; sourceTree = "<group>"; };
 		182E78D82A2B4BB6002A4C12 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		182E78DC2A2B5AE1002A4C12 /* AddTaskPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskPresenter.swift; sourceTree = "<group>"; };
+		182E78DF2A2B5AFF002A4C12 /* AddTaskValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskValidator.swift; sourceTree = "<group>"; };
+		182E78E22A2B5B58002A4C12 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		182E78E42A2B5C57002A4C12 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		182E78E72A2B5CD7002A4C12 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		182E78E92A2B5DA4002A4C12 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		182E78EC2A2B5F0E002A4C12 /* AddTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
 		964C59A790365A07D3E922E7 /* Pods-TaskManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManager.debug.xcconfig"; path = "Target Support Files/Pods-TaskManager/Pods-TaskManager.debug.xcconfig"; sourceTree = "<group>"; };
 		DC02E1A7FFF175C8BE303BC6 /* Pods_TaskManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44D70A02A2AE6E200B7D3B3 /* TaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +177,7 @@
 		182E78462A2AECC7002A4C12 /* Tools and Utils */ = {
 			isa = PBXGroup;
 			children = (
+				182E78E12A2B5B51002A4C12 /* Error */,
 				182E78872A2AF588002A4C12 /* Manager */,
 				182E78842A2AF4E2002A4C12 /* Protocol */,
 				182E78762A2AF343002A4C12 /* Extension */,
@@ -193,6 +208,7 @@
 		182E784E2A2AEDE7002A4C12 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				182E78E62A2B5CCB002A4C12 /* Toast */,
 				182E789A2A2AFE1F002A4C12 /* Image */,
 				182E78812A2AF480002A4C12 /* TextField */,
 				182E787C2A2AF3D1002A4C12 /* Navigation */,
@@ -294,6 +310,7 @@
 			children = (
 				182E78852A2AF4EE002A4C12 /* ReusableView.swift */,
 				182E78A22A2B0F6A002A4C12 /* BaseView.swift */,
+				182E78E42A2B5C57002A4C12 /* ErrorView.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -309,6 +326,7 @@
 		182E788A2A2AF5C2002A4C12 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				182E78DA2A2B5A3F002A4C12 /* Add Task (MVP) */,
 				182E78B82A2B24CF002A4C12 /* Task Board (VIPER) */,
 				182E789D2A2B0167002A4C12 /* Language Selection (MVP) */,
 				182E788B2A2AF5CB002A4C12 /* Entry and Splash */,
@@ -331,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				182E788D2A2AF66B002A4C12 /* BaseViewController.swift */,
+				182E78E92A2B5DA4002A4C12 /* ErrorViewController.swift */,
 				182E78912A2AF6D3002A4C12 /* TableBaseViewController.swift */,
 				182E78932A2AF772002A4C12 /* PresentationController.swift */,
 			);
@@ -472,6 +491,56 @@
 				182E78CA2A2B3F3A002A4C12 /* TaskBoardRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		182E78DA2A2B5A3F002A4C12 /* Add Task (MVP) */ = {
+			isa = PBXGroup;
+			children = (
+				182E78EB2A2B5EE6002A4C12 /* View */,
+				182E78DB2A2B5ABA002A4C12 /* Presenter */,
+				182E78DE2A2B5AEB002A4C12 /* Other */,
+			);
+			path = "Add Task (MVP)";
+			sourceTree = "<group>";
+		};
+		182E78DB2A2B5ABA002A4C12 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				182E78DC2A2B5AE1002A4C12 /* AddTaskPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		182E78DE2A2B5AEB002A4C12 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				182E78DF2A2B5AFF002A4C12 /* AddTaskValidator.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		182E78E12A2B5B51002A4C12 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				182E78E22A2B5B58002A4C12 /* CustomError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		182E78E62A2B5CCB002A4C12 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				182E78E72A2B5CD7002A4C12 /* Toast.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		182E78EB2A2B5EE6002A4C12 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				182E78EC2A2B5F0E002A4C12 /* AddTaskVC.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CAA679823BE59C82FA1997B4 /* Pods */ = {
@@ -641,10 +710,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				182E78862A2AF4EE002A4C12 /* ReusableView.swift in Sources */,
+				182E78DD2A2B5AE1002A4C12 /* AddTaskPresenter.swift in Sources */,
 				182E78802A2AF400002A4C12 /* UINavigationController.swift in Sources */,
 				182E78562A2AEE78002A4C12 /* BaseLabel.swift in Sources */,
 				182E78A02A2B0E6E002A4C12 /* IMLanguage.swift in Sources */,
 				182E78B12A2B159A002A4C12 /* ReuseIds.swift in Sources */,
+				182E78EA2A2B5DA4002A4C12 /* ErrorViewController.swift in Sources */,
+				182E78ED2A2B5F0E002A4C12 /* AddTaskVC.swift in Sources */,
 				182E78CE2A2B40E9002A4C12 /* TaskBoardTVC.swift in Sources */,
 				182E78612A2AEEE2002A4C12 /* Font.swift in Sources */,
 				182E78832A2AF48F002A4C12 /* BaseTextField.swift in Sources */,
@@ -671,6 +743,7 @@
 				182E78C82A2B31CD002A4C12 /* TaskBoardInteractor.swift in Sources */,
 				182E78C22A2B2D23002A4C12 /* TaskBoardVC.swift in Sources */,
 				182E78902A2AF686002A4C12 /* Typealias.swift in Sources */,
+				182E78E02A2B5AFF002A4C12 /* AddTaskValidator.swift in Sources */,
 				182E785A2A2AEE90002A4C12 /* LabelMedium.swift in Sources */,
 				182E78662A2AEF48002A4C12 /* LightStorage.swift in Sources */,
 				182E78C52A2B2E75002A4C12 /* TaskBoardPresenter.swift in Sources */,
@@ -678,6 +751,7 @@
 				182E78AE2A2B127E002A4C12 /* LanguageSelectionTVC.swift in Sources */,
 				182E78BE2A2B2BBA002A4C12 /* TaskBoardAbstractions.swift in Sources */,
 				182E785C2A2AEE9A002A4C12 /* LabelRegular.swift in Sources */,
+				182E78E52A2B5C57002A4C12 /* ErrorView.swift in Sources */,
 				182E78B32A2B171A002A4C12 /* StoryboardIds.swift in Sources */,
 				182E786C2A2AF060002A4C12 /* StringLocalized.swift in Sources */,
 				182E78A82A2B10CB002A4C12 /* LanguageSelectionVC.swift in Sources */,
@@ -687,6 +761,8 @@
 				182E78BB2A2B250E002A4C12 /* IMTaskBoard.swift in Sources */,
 				182E78D12A2B4117002A4C12 /* RoundedTableViewCell.swift in Sources */,
 				182E78752A2AF32A002A4C12 /* RoundedButton.swift in Sources */,
+				182E78E32A2B5B58002A4C12 /* CustomError.swift in Sources */,
+				182E78E82A2B5CD7002A4C12 /* Toast.swift in Sources */,
 				F44D70A42A2AE6E200B7D3B3 /* AppDelegate.swift in Sources */,
 				182E78892A2AF591002A4C12 /* LogManager.swift in Sources */,
 				182E78512A2AEE08002A4C12 /* BaseTableViewCell.swift in Sources */,
