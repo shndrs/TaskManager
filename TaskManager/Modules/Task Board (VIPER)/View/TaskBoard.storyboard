@@ -44,40 +44,33 @@
             <objects>
                 <viewController storyboardIdentifier="AddTaskVC" id="poL-de-XLw" customClass="AddTaskVC" customModule="TaskManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="htf-qb-G4A">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="395"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="442"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAs-wB-f07">
-                                <rect key="frame" x="179.66666666666666" y="75" width="55" height="4"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="4" id="ZGU-H5-Lql"/>
-                                    <constraint firstAttribute="width" constant="55" id="cgA-tD-1PJ"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup your Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quX-ZC-AD2" customClass="LabelBold" customModule="TaskManager" customModuleProvider="target">
+                                <rect key="frame" x="16" y="75" width="382" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kO-xk-OdY">
-                                <rect key="frame" x="16" y="95" width="382" height="136"/>
+                                <rect key="frame" x="16" y="109" width="382" height="153"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="W2h-jR-101">
-                                        <rect key="frame" x="16" y="16" width="350" height="90"/>
+                                        <rect key="frame" x="16" y="16" width="350" height="110"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sdy-1S-IR1" customClass="BaseTextField" customModule="TaskManager" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="45"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="55"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="xcW-Jz-azb"/>
+                                                    <constraint firstAttribute="height" constant="55" id="xcW-Jz-azb"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Bd-SP-EPZ" customClass="BaseTextField" customModule="TaskManager" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="45" width="350" height="45"/>
+                                                <rect key="frame" x="0.0" y="55" width="350" height="55"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="bLi-Iv-pUB"/>
+                                                    <constraint firstAttribute="height" constant="55" id="bLi-Iv-pUB"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -93,7 +86,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="moF-iH-5pq">
-                                <rect key="frame" x="16" y="247" width="382" height="98"/>
+                                <rect key="frame" x="16" y="294" width="382" height="98"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKu-4v-nRT" customClass="RoundedButton" customModule="TaskManager" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="45"/>
@@ -123,20 +116,22 @@
                         <viewLayoutGuide key="safeArea" id="cX6-Ue-xb0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="moF-iH-5pq" firstAttribute="top" secondItem="8kO-xk-OdY" secondAttribute="bottom" constant="16" id="9eh-Kd-Hag"/>
+                            <constraint firstItem="moF-iH-5pq" firstAttribute="top" secondItem="8kO-xk-OdY" secondAttribute="bottom" constant="32" id="9eh-Kd-Hag"/>
+                            <constraint firstItem="quX-ZC-AD2" firstAttribute="leading" secondItem="cX6-Ue-xb0" secondAttribute="leading" constant="16" id="CCH-Fl-gSH"/>
                             <constraint firstItem="moF-iH-5pq" firstAttribute="leading" secondItem="cX6-Ue-xb0" secondAttribute="leading" constant="16" id="J3N-yB-V0C"/>
-                            <constraint firstItem="8kO-xk-OdY" firstAttribute="top" secondItem="OAs-wB-f07" secondAttribute="bottom" constant="16" id="LV9-vx-j6b"/>
-                            <constraint firstItem="OAs-wB-f07" firstAttribute="top" secondItem="cX6-Ue-xb0" secondAttribute="top" constant="16" id="UOR-DY-HbM"/>
+                            <constraint firstItem="8kO-xk-OdY" firstAttribute="top" secondItem="quX-ZC-AD2" secondAttribute="bottom" constant="16" id="Rvz-Su-OgC"/>
                             <constraint firstItem="cX6-Ue-xb0" firstAttribute="trailing" secondItem="8kO-xk-OdY" secondAttribute="trailing" constant="16" id="Ufn-2W-5eb"/>
                             <constraint firstItem="cX6-Ue-xb0" firstAttribute="trailing" secondItem="moF-iH-5pq" secondAttribute="trailing" constant="16" id="ZMG-OD-MPU"/>
-                            <constraint firstItem="OAs-wB-f07" firstAttribute="centerX" secondItem="htf-qb-G4A" secondAttribute="centerX" id="dZz-dD-GYs"/>
                             <constraint firstItem="8kO-xk-OdY" firstAttribute="leading" secondItem="cX6-Ue-xb0" secondAttribute="leading" constant="16" id="fIp-v4-03u"/>
+                            <constraint firstItem="quX-ZC-AD2" firstAttribute="top" secondItem="cX6-Ue-xb0" secondAttribute="top" constant="16" id="gmU-rq-aVu"/>
                             <constraint firstItem="cX6-Ue-xb0" firstAttribute="bottom" secondItem="moF-iH-5pq" secondAttribute="bottom" constant="16" id="nCK-XJ-4uL"/>
+                            <constraint firstItem="cX6-Ue-xb0" firstAttribute="trailing" secondItem="quX-ZC-AD2" secondAttribute="trailing" constant="16" id="vFe-55-9Xb"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="395"/>
+                    <size key="freeformSize" width="414" height="442"/>
                     <connections>
+                        <outlet property="backView" destination="8kO-xk-OdY" id="c75-TA-wkz"/>
                         <outlet property="btnAdd" destination="tKu-4v-nRT" id="yWx-FE-RTH"/>
                         <outlet property="btnCancel" destination="xn4-oR-pVg" id="Daq-N0-61k"/>
                         <outlet property="txtDescription" destination="9Bd-SP-EPZ" id="Bs2-h3-NcA"/>
@@ -145,13 +140,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0h6-kY-BGp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865.64885496183206" y="134.85915492957747"/>
+            <point key="canvasLocation" x="865.64885496183206" y="118.30985915492958"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="9Bd-SP-EPZ">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+        <designable name="Sdy-1S-IR1">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+    </designables>
     <resources>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

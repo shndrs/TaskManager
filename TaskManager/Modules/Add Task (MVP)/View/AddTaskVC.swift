@@ -19,8 +19,24 @@ final class AddTaskVC: ErrorViewController {
         return AddTaskPresenter(view: self)
     }()
 
-    @IBOutlet private weak var txtTitle: BaseTextField!
-    @IBOutlet private weak var txtDescription: BaseTextField!
+    @IBOutlet private weak var backView: UIView! {
+        didSet {
+            backView.addBorder(color: Colors.secondaryLabel,
+                               thickness: Border.light)
+            backView.addCornerRadius(radius: 16)
+            backView.backgroundColor = Colors.primaryBack
+        }
+    }
+    @IBOutlet private weak var txtTitle: BaseTextField! {
+        didSet {
+            txtTitle.placeholder = Strings.title.value()
+        }
+    }
+    @IBOutlet private weak var txtDescription: BaseTextField! {
+        didSet {
+            txtDescription.placeholder = Strings.description.value()
+        }
+    }
     @IBOutlet private weak var btnAdd: RoundedButton! {
         didSet {
             btnAdd.setTitle(Strings.add.value(), for: .normal)

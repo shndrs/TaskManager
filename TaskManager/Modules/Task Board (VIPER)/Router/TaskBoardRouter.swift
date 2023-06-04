@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TaskBoardRouter {
+final class TaskBoardRouter: NSObject {
     
     weak var view: TaskBoardVC?
     
@@ -17,8 +17,12 @@ final class TaskBoardRouter {
 
 extension TaskBoardRouter: TaskBoardLauncher {
     
-    func goToAddTask(from navigation: UINavigationController) {
-        // TODO: Go to Add Task
+    func goToAddTask() {
+        let view = AddTaskVC.instantiate(storyboard: .taskBoard)
+        view.modalPresentationStyle = .custom
+        view.transitioningDelegate = self.view
+        view.delegate = self.view
+        self.view?.present(view, animated: true)
     }
     
     static func createModule() -> TaskBoardVC {

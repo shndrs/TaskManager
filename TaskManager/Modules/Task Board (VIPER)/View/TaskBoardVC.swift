@@ -32,7 +32,9 @@ final class TaskBoardVC: TableBaseViewController {
 
 fileprivate extension TaskBoardVC {
     
-    @objc func addAction() {}
+    @objc func addAction() {
+        presenter?.goToAddTask()
+    }
     
 }
 
@@ -105,6 +107,32 @@ extension TaskBoardVC: NoTaskAddButtonDelegate {
     func addButtonPressed() {
         addAction()
         LogManager.info(input: Strings.appName.value())
+    }
+    
+}
+
+// MARK: - UIViewController Transitioning Delegate
+
+extension TaskBoardVC: UIViewControllerTransitioningDelegate {
+    
+    func presentationController(forPresented presented: UIViewController,
+                                presenting: UIViewController?,
+                                source: UIViewController) -> UIPresentationController? {
+        let view = PresentationController(presentedViewController: presented,
+                                          presenting: presenting)
+        view.presentedViewHeight = 371
+        return view
+    }
+    
+}
+
+// MARK: - Add Task Delegate
+
+extension TaskBoardVC: AddTaskDelegate {
+    
+    func add(task: IMTaskBoard) {
+        Toast.shared.show(success: Strings.addedSuccessfully.value())
+        presenter?.add(task: task)
     }
     
 }

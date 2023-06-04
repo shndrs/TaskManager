@@ -13,6 +13,8 @@ class RoundedTableViewCell: BaseTableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        backView.addBorder(color: Colors.secondaryLabel,
+                           thickness: Border.superLight)
         backView.addCornerRadius(radius: 16)
         backView.backgroundColor = Colors.primaryBack
     }

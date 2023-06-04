@@ -43,6 +43,9 @@ enum Strings: String {
     
     case titleIsEmpty
     case descriptionIsEmpty
+    case addedSuccessfully
+    case title
+    case description
         
 }
 

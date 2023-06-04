@@ -46,6 +46,12 @@ extension Strings {
             return "Aggiungere"
         case .cancel:
             return "Annulla"
+        case .addedSuccessfully:
+            return "Aggiunto con successo"
+        case .title:
+            return "Title"
+        case .description:
+            return "Description"
         }
     }
     
@@ -83,9 +89,15 @@ extension Strings {
         case .success:
             return "Success"
         case .add:
-            return "Add"
+            return "Add the Task"
         case .cancel:
             return "Cancel"
+        case .addedSuccessfully:
+            return "Added Successfully"
+        case .title:
+            return "Title"
+        case .description:
+            return "Description"
         }
     }
     

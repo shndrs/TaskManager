@@ -21,8 +21,8 @@ final class TaskBoardPresenter: TaskBoardViewToPresenter {
         self.router = router
     }
     
-    func goToAddTask(from navigation: UINavigationController) {
-        router?.goToAddTask(from: navigation)
+    func goToAddTask() {
+        router?.goToAddTask()
     }
 
     func add(task: IMTaskBoard) {

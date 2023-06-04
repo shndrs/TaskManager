@@ -11,12 +11,12 @@ final class TaskBoardTVC: RoundedTableViewCell, ReusableView {
 
     @IBOutlet private weak var imgIcon: UIImageView!
     @IBOutlet private weak var lblTitle: LabelBold!
-    @IBOutlet private weak var lblDescription: LabelLight! {
+    @IBOutlet private weak var lblDescription: LabelRegular! {
         didSet {
             lblDescription.textColor = Colors.secondaryLabel
         }
     }
-    @IBOutlet private weak var lblStatus: LabelMedium!
+    @IBOutlet private weak var lblStatus: LabelLight!
     
 }
 

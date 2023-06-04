@@ -20,8 +20,8 @@ extension TintButton {
     override func setup() {
         super.setup()
         self.backgroundColor = Colors.clear
-        self.titleLabel?.textColor = Colors.label
-        self.titleLabel?.font = Font.light.return(size: 15)
+        self.titleLabel?.textColor = Colors.cancel
+        self.titleLabel?.font = Font.regular.return(size: 15)
     }
     
 }
