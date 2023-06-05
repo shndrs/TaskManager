@@ -38,20 +38,6 @@ fileprivate extension TaskBoardVC {
         presenter?.goToAddTask()
     }
     
-    func move(from: IndexPath, to: IndexPath) {
-        UIView.animate(withDuration: 1, animations: {
-            self.tableView.moveRow(at: from, to: to)
-        }) { (true) in
-            // write here code to remove score from array at position "at" and insert at position "to" and after reloadData()
-        }
-    }
-
-    @IBAction func buttonPressed(_ sender: UIButton) {
-        let fromIndexPath = IndexPath(row: 4, section: 0)
-        let toIndexPath = IndexPath(row: 1, section: 0)
-        move(from: fromIndexPath, to: toIndexPath)
-    }
-    
 }
 
 // MARK: - Life Cycle
