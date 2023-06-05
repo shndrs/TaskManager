@@ -24,4 +24,8 @@ extension TaskBoardInteractor: TaskBoardPresenterToInteractor {
         presenter?.set(table: tasks)
     }
     
+    func update(tasks: [IMTaskBoard]) {
+        self.tasks = tasks
+    }
+    
 }

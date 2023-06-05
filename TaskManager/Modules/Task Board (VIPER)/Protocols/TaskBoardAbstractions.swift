@@ -12,6 +12,7 @@ protocol TaskBoardViewToPresenter: AnyObject {
     var interactor: TaskBoardPresenterToInteractor? { get set }
     var router: TaskBoardLauncher? { get set }
     
+    func update(tasks: [IMTaskBoard])
     func goToAddTask()
     func add(task: IMTaskBoard)
 }
@@ -26,6 +27,7 @@ protocol TaskBoardLauncher: AnyObject {
 }
 
 protocol TaskBoardPresenterToInteractor: AnyObject {
+    func update(tasks: [IMTaskBoard])
     func add(task: IMTaskBoard)
 }
 

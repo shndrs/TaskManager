@@ -29,6 +29,10 @@ final class TaskBoardPresenter: TaskBoardViewToPresenter {
         interactor?.add(task: task)
     }
     
+    func update(tasks: [IMTaskBoard]) {
+        interactor?.update(tasks: tasks)
+    }
+    
 }
 
 // MARK: - Iteractor To Presenter

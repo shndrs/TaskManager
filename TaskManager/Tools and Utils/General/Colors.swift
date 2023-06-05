@@ -9,14 +9,15 @@ import UIKit
 
 struct Colors {
     
-    public static let defOrange = UIColor.orange
+    public static let orange = UIColor.orange
     public static let lightGray = UIColor(red: 211/255,
                                           green: 211/255,
                                           blue: 211/255,
                                           alpha: 1.0)
     public static let clear = UIColor.clear
     public static let label = UIColor.label
-    public static let primaryTint = #colorLiteral(red: 0.0431372549, green: 0.1137254902, blue: 0.5745313764, alpha: 1)
+    public static let primaryTint = #colorLiteral(red: 0.3236978054, green: 0.1063579395, blue: 0.574860394, alpha: 1)
+//    public static let primaryTint = #colorLiteral(red: 0.0431372549, green: 0.1137254902, blue: 0.5745313764, alpha: 1)
     public static let secondaryTint = #colorLiteral(red: 0.3091548681, green: 0.6293550134, blue: 0.6715577245, alpha: 1)
     public static let secondaryGreen = #colorLiteral(red: 0.2666666667, green: 0.7058823529, blue: 0.4274509804, alpha: 1)
     public static let pageControlTint = #colorLiteral(red: 1, green: 0.839899214, blue: 0.1666979983, alpha: 1)

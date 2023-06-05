@@ -49,9 +49,9 @@ extension Strings {
         case .addedSuccessfully:
             return "Aggiunto con successo"
         case .title:
-            return "Title"
+            return "Titolo"
         case .description:
-            return "Description"
+            return "Descrizione"
         }
     }
     

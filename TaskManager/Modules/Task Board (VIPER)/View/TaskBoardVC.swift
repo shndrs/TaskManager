@@ -22,6 +22,8 @@ final class TaskBoardVC: TableBaseViewController {
         super.tableSetup()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.dragDelegate = self
+        tableView.dragInteractionEnabled = true
         tableView.rowHeight = UITableView.automaticDimension
         register(reuseIds: ReuseIds.taskBoard)
     }
@@ -34,6 +36,20 @@ fileprivate extension TaskBoardVC {
     
     @objc func addAction() {
         presenter?.goToAddTask()
+    }
+    
+    func move(from: IndexPath, to: IndexPath) {
+        UIView.animate(withDuration: 1, animations: {
+            self.tableView.moveRow(at: from, to: to)
+        }) { (true) in
+            // write here code to remove score from array at position "at" and insert at position "to" and after reloadData()
+        }
+    }
+
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        let fromIndexPath = IndexPath(row: 4, section: 0)
+        let toIndexPath = IndexPath(row: 1, section: 0)
+        move(from: fromIndexPath, to: toIndexPath)
     }
     
 }
@@ -55,7 +71,17 @@ extension TaskBoardVC {
 
 // MARK: - TableView Implementation
 
-extension TaskBoardVC: UITableViewDelegate, UITableViewDataSource {
+extension TaskBoardVC: UITableViewDelegate,
+                       UITableViewDataSource,
+                       UITableViewDragDelegate {
+    
+    func tableView(_ tableView: UITableView,
+                   itemsForBeginning session: UIDragSession,
+                   at indexPath: IndexPath) -> [UIDragItem] {
+        let dragItem = UIDragItem(itemProvider: NSItemProvider())
+        dragItem.localObject = tasks[indexPath.row]
+        return [ dragItem ]
+    }
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
@@ -77,7 +103,9 @@ extension TaskBoardVC: UITableViewDelegate, UITableViewDataSource {
             cell?.delegate = self
             return cell ?? ClearCell()
         default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: TaskBoardTVC.reuseIdentifier) as? TaskBoardTVC
+            let cell = tableView
+                .dequeueReusableCell(withIdentifier: TaskBoardTVC.reuseIdentifier)
+                    as? TaskBoardTVC
             cell?.fill(cell: tasks[indexPath.row])
             return cell ?? ClearCell()
         }
@@ -85,6 +113,33 @@ extension TaskBoardVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tasks.count == 0 ? (view.frame.height - 100) : (UITableView.automaticDimension)
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        guard tasks[indexPath.row].status != .completed else { return nil }
+        let item = UIContextualAction(style: .normal, title: Strings.completed.value()) {
+            (contextualAction, view, boolValue) in
+            self.tasks[indexPath.row].status = .completed
+            self.tableView.reloadRows(at: [indexPath], with: .right)
+            self.presenter?.update(tasks: self.tasks)
+        }
+        item.backgroundColor = Colors.grassGreen
+        item.image = Images.successLite
+        let swipeActions = UISwipeActionsConfiguration(actions: [item])
+        return swipeActions
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        // Update the model
+        let mover = tasks.remove(at: sourceIndexPath.row)
+        tasks.insert(mover, at: destinationIndexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
 }

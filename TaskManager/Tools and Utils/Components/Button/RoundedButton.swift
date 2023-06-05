@@ -19,8 +19,8 @@ extension RoundedButton {
     
     override func setup() {
         super.setup()
-        self.addBorder(color: Colors.label,
-                       thickness: Border.normal)
+        self.addBorder(color: Colors.secondaryLabel,
+                       thickness: Border.light)
         self.titleLabel?.textColor = Colors.white
     }
     
