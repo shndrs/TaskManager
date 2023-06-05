@@ -131,10 +131,11 @@ extension TaskBoardVC: UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView,
-                   moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        // Update the model
+                   moveRowAt sourceIndexPath: IndexPath,
+                   to destinationIndexPath: IndexPath) {
         let mover = tasks.remove(at: sourceIndexPath.row)
         tasks.insert(mover, at: destinationIndexPath.row)
+        presenter?.update(tasks: self.tasks)
     }
     
     func tableView(_ tableView: UITableView,
@@ -161,7 +162,6 @@ extension TaskBoardVC: NoTaskAddButtonDelegate {
     
     func addButtonPressed() {
         addAction()
-        LogManager.info(input: Strings.appName.value())
     }
     
 }
